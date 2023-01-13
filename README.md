@@ -1,6 +1,6 @@
 # 🍣🍜.to
 
-Code for [🍣🍜.to](xn--2i8hna.to)
+Code for [🍣🍜.to](https://xn--2i8hna.to)
 
 ## Author
 
