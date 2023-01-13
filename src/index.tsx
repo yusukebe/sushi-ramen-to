@@ -63,9 +63,20 @@ const Page = ({ sushiOrRamen }: { sushiOrRamen: string }) => {
   return (
     <div>
       <p>
-        You like <span class='large'>{sushiOrRamen}</span>
+        You like
+        <a class='large' href={`/${encodeURI(sushiOrRamen)}`}>
+          {sushiOrRamen}
+        </a>
         <br />
-        But I like <span class='large'>🍣</span> and <span class='large'>🍜</span>!!
+        But I like
+        <a class='large' href={`/${encodeURI('🍣')}`}>
+          🍣
+        </a>
+        and
+        <a class='large' href={`/${encodeURI('🍜')}`}>
+          🍜
+        </a>
+        !!
       </p>
       <p>
         <small>
