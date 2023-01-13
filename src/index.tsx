@@ -5,15 +5,19 @@ const app = new Hono()
 
 const Layout = (props: any) => html`<html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>🍣🍜.to</title>
     <style>
+      body {
+        font-size: 1.4rem;
+      }
       a {
         text-decoration: none;
         color: #2b3a55;
       }
       header {
         border-bottom: 1px solid #eee;
-        width: 300px;
+        width: 200px;
         margin: 2rem auto 1rem;
         padding: 0 0 0.5rem;
         text-align: center;
@@ -22,17 +26,17 @@ const Layout = (props: any) => html`<html>
         text-align: center;
       }
       .large {
-        font-size: 1.4rem;
+        font-size: 3.5rem;
       }
       .x-large {
-        font-size: 1.8rem;
+        font-size: 5rem;
       }
     </style>
   </head>
   <body>
     <header>
       <small>
-        <p><a href="/">Which you like?</a></p>
+        <p><a href="/">Which do you like?</a></p>
       </small>
     </header>
     ${props.children}
@@ -60,11 +64,13 @@ const Page = ({ sushiOrRamen }: { sushiOrRamen: string }) => {
     <div>
       <p>
         You like <span class='large'>{sushiOrRamen}</span>
+        <br />
+        But I like <span class='large'>🍣</span> and <span class='large'>🍜</span>!!
       </p>
       <p>
-        <a href='https://github.com/yusukebe/sushi-ramen-to'>
-          But I like <span class='large'>🍣</span> and <span class='large'>🍜</span>!
-        </a>
+        <small>
+          <a href='https://github.com/yusukebe/sushi-ramen-to'>go to GitHub</a>
+        </small>
       </p>
     </div>
   )
