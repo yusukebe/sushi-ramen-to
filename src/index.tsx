@@ -62,7 +62,7 @@ const Page = ({ sushiOrRamen }: { sushiOrRamen: string }) => {
         You like <span class='large'>{sushiOrRamen}</span>
       </p>
       <p>
-        <a href='https://github.com/yusukebe'>
+        <a href='https://github.com/yusukebe/sushi-ramen-to'>
           But I like <span class='large'>🍣</span> and <span class='large'>🍜</span>!
         </a>
       </p>
