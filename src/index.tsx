@@ -22,6 +22,14 @@ const Layout = (props: any) => html`<html>
         padding: 0 0 0.5rem;
         text-align: center;
       }
+      footer {
+        border-top: 1px solid #eee;
+        width: 200px;
+        margin: 2rem auto 1rem;
+        padding: 1rem 0 0.5rem;
+        text-align: center;
+        font-size: 12px;
+      }
       p {
         text-align: center;
       }
@@ -40,6 +48,11 @@ const Layout = (props: any) => html`<html>
       </small>
     </header>
     ${props.children}
+    <footer>
+      <a rel="me" href="https://github.com/yusukebe">GitHub</a>&nbsp;
+      <a rel="me" href="https://twitter.com/yusukebe">Twitter</a>&nbsp;
+      <a rel="me" href="https://mas.to/@yusukebe">Mastodon</a>
+    </footer>
   </body>
 </html>`
 
@@ -77,11 +90,6 @@ const Page = ({ sushiOrRamen }: { sushiOrRamen: string }) => {
           🍜
         </a>
         !!
-      </p>
-      <p>
-        <small>
-          <a href='https://github.com/yusukebe/sushi-ramen-to'>go to GitHub</a>
-        </small>
       </p>
     </div>
   )
